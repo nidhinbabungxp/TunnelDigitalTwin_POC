@@ -265,23 +265,23 @@ public class RigReceiver : MonoBehaviour
         {
             if (!calibrated)
             {
-                startAvatarPos = transform.position;
+               // startAvatarPos = transform.position;
                 startAvatarRot = transform.rotation;
 
-                startChestPos = source.ChestPosition;
+               // startChestPos = source.ChestPosition;
                 startChestRot = source.ChestRotation;
 
                 calibrated = true;
             }
 
-            Vector3 deltaPos = source.ChestPosition - startChestPos;
-            deltaPos.y = 0f;
+           // Vector3 deltaPos = source.ChestPosition - startChestPos;
+            //deltaPos.y = 0f;
 
-            transform.position = Vector3.Lerp(
-                transform.position,
-                startAvatarPos + deltaPos,
-                Time.deltaTime * chestSmoothSpeed
-            );
+          //  transform.position = Vector3.Lerp(
+            //    transform.position,
+            //    startAvatarPos + deltaPos,
+            //    Time.deltaTime * chestSmoothSpeed
+           // );
 
             Quaternion deltaRot = source.ChestRotation * Quaternion.Inverse(startChestRot);
 

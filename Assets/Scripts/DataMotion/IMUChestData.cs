@@ -8,12 +8,15 @@ public class IMUChestData : MonoBehaviour
 public float posOffset = 0.0f; // Offset for the chest position along the forward axis
     // Additional logic to update the above properties based on IMU data can be added here.
 
-     void LateUpdate()
+    void LateUpdate()
     {
-        print("Chest Position: " + source.ChestPosition);
-       var adjustedPosition = source.ChestPosition + transform.forward * posOffset;
-       transform.position = adjustedPosition;
+        if (source == null)
+            return;
+        Debug.Log("Chest Position: " + source.ChestPosition);
+        Vector3 adjustedPosition =
+            source.ChestPosition +
+            transform.forward * posOffset;
+        transform.position = adjustedPosition;
     }
 
-    
 }

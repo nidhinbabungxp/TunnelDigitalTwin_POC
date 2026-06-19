@@ -5352,8 +5352,8 @@ MonoBehaviour:
   _rightHand: {fileID: 0}
   rightHandOnly: 0
   leftHandOnly: 0
-  chestOnly: 0
-  allMovementData: 1
+  chestOnly: 1
+  allMovementData: 0
   chestPositionThreshold: 0.02
   chestSmoothSpeed: 10
   globalcoordLeft: {x: 0, y: 0, z: 0}
@@ -11079,14 +11079,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 505940822}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 575e62c863ea4ce4490f4646ac8a1ea0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::IMUChestData
   source: {fileID: 40313598}
   kevin: {fileID: 1080011064}
-  posOffset: 2
+  posOffset: 0.05
 --- !u!1 &508811174
 GameObject:
   m_ObjectHideFlags: 0
@@ -21648,19 +21648,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &1080011062
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1080011058}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aaa088b2797fe6a43aafc3281d20eb46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WorkerMovement
-  target: {fileID: 505940826}
 --- !u!4 &1080011064 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 585cddde1d133a64ea92d08aa882d93c, type: 3}
@@ -21723,7 +21710,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1080011058}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1af24d74753310c4e94fc7eef498ed72, type: 3}
   m_Name: 
@@ -21801,6 +21788,20 @@ MonoBehaviour:
   - m_Rig: {fileID: 1148753934}
     m_Active: 1
   m_Effectors: []
+--- !u!114 &1080011074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080011058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95b7df29b8079fa4ea34b363361d70f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  target: {fileID: 505940826}
+  moveThreshold: 0.75
 --- !u!1 &1106011865
 GameObject:
   m_ObjectHideFlags: 0
@@ -25758,9 +25759,6 @@ PrefabInstance:
       addedObject: {fileID: 1080011061}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 585cddde1d133a64ea92d08aa882d93c, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1080011062}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 585cddde1d133a64ea92d08aa882d93c, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1080011067}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 585cddde1d133a64ea92d08aa882d93c, type: 3}
       insertIndex: -1
@@ -25777,6 +25775,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 585cddde1d133a64ea92d08aa882d93c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1080011073}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 585cddde1d133a64ea92d08aa882d93c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1080011074}
   m_SourcePrefab: {fileID: 100100000, guid: 585cddde1d133a64ea92d08aa882d93c, type: 3}
 --- !u!1 &1282260457
 GameObject:
